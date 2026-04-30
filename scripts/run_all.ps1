@@ -7,7 +7,7 @@ function Invoke-Checked {
 }
 
 Invoke-Checked { docker compose build nifi nifi-init producer }
-docker compose up -d postgres kafka nifi metabase
+Invoke-Checked { docker compose up -d postgres kafka nifi metabase }
 
 $containers = @(
     "bd_nifi_postgres",
